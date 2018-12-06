@@ -32,14 +32,14 @@ module.exports = class Deck {
         this.deck.push(`${suits[s]} of ${[faces[f]]}`);
       }
     }
-    return console.log("Rebuid the deck");
+    console.log("Rebuid the deck");
   }
 
   shuffleCard() {
     let temp_val;
     let random_index;
     if (!this.deck.length) {
-      return console.log("Please generate the deck first");
+      console.log("Please generate the deck first");
     } else {
       for (let i = 0; i < this.deck.length; i++) {
         random_index = Math.floor(Math.random() * this.deck.length);
@@ -47,38 +47,38 @@ module.exports = class Deck {
         this.deck[i] = this.deck[random_index];
         this.deck[random_index] = temp_val;
       }
-      return console.log("Shuffled the deck");
+      console.log("Shuffled the deck");
     }
   }
 
   dealCard() {
     if (this.deck.length === 0) {
-      return console.log("Run out of Cards in the Deck");
+      console.log("Run out of Cards in the Deck");
     } else {
       let dealt_card = this.deck.shift();
       this.dealt_cards.push(dealt_card);
-      return console.log("dealtCard", dealt_card);
+      console.log("dealtCard", dealt_card);
     }
   }
 
   discardCard(index) {
     if (this.dealt_cards.length === 0) {
-      return console.log("Run out of the cards in the dealtCards ");
+      console.log("Run out of the cards in the dealtCards ");
     } else {
       let discarded_card;
       if (index > -1 && index < this.dealt_cards.length) {
         discarded_card = this.dealt_cards.splice(index, 1).toString();
         this.discarded_cards.push(discarded_card);
-        return console.log("discarded", this.discarded_cards);
+        console.log("discarded", this.discarded_cards);
       } else {
-        return console.log("Invalid Index");
+        console.log("Invalid Index");
       }
     }
   }
 
   cut_deck(index) {
     if (this.deck.length === 0) {
-      return console.log("Run out of Cards in the Deck");
+      console.log("Run out of Cards in the Deck");
     } else {
       let top_half;
       let bottom_half;
@@ -124,7 +124,7 @@ module.exports = class Deck {
 
     this.deck = this.deck.filter(item => !not_deck.includes(item));
 
-    return console.log("Oredered the deck");
+    console.log("Oredered the deck");
   }
 
   display_allCards() {

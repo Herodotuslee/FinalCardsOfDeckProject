@@ -1,9 +1,9 @@
-const template = require("../controllers/template.js");
+const cardController = require("../controllers/card_controller.js");
 module.exports = function(app) {
-  app.get("/", template.rebuild_deck);
-  app.get("/shuffleCard", template.shuffleCard);
-  app.get("/dealCard", template.dealCard);
-  app.get("/discardCard/:index", template.discardCard);
-  app.get("/cutDeck/:index", template.cut_deck);
-  app.get("/orderDeck", template.order_deck);
+  app.get("/", cardController.rebuild_deck);
+  app.get("/shuffleCard", cardController.shuffleCard);
+  app.get("/dealCard", cardController.dealCard);
+  app.get("/discardCard/:index", cardController.discardCard);
+  app.get("/cutDeck/:index", cardController.cut_deck);
+  app.get("/orderDeck", cardController.order_deck);
 };

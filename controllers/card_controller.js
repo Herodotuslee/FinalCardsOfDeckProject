@@ -1,4 +1,4 @@
-const Deck = require("../deck.js");
+const Deck = require("../services/deck.js");
 
 deck = new Deck();
 module.exports = {
