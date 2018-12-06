@@ -2,6 +2,8 @@ To start using this simply clone it and do npm install.
 
 Use "node server.js" or "nodemon server.js" to run the server.
 
+The server will be running on localhost:8000
+
 URL
 
 "/" is for user to rebuild the deck,
